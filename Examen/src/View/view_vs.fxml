@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+fx:controller= "controller.MainController">
+   <children>
+      <Label layoutX="189.0" layoutY="14.0" prefHeight="30.0" prefWidth="413.0" text="Sistema de Registro de visitantes">
+         <font>
+            <Font name="Tahoma Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="71.0" text="Nombre completo:">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" layoutX="22.0" layoutY="88.0" prefHeight="25.0" prefWidth="189.0" text="Ingrese el nombre del visitante..." />
+      <Label layoutX="245.0" layoutY="71.0" text="Tipo de visitante:">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnAgregarVisitante" layoutX="22.0" layoutY="126.0" mnemonicParsing="false" onAction="#Agregar" style="-fx-background-color: blue;" text="+ Agregar Visitante" textFill="#f8f5f5">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevoTipo" layoutX="152.0" layoutY="126.0" mnemonicParsing="false" onAction="#Nuevo" style="-fx-background-color: Green;" text="Nuevo Tipo" textFill="#fffbfb" />
+      <Button fx:id="btnEliminarVisitante" layoutX="241.0" layoutY="127.0" mnemonicParsing="false" onAction="#Eliminar" style="-fx-background-color: Red;" text="Eliminar Visitantes" textFill="#f8f8f8">
+         <font>
+            <Font name="Tahoma Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnGuardarVisitante" layoutX="447.0" layoutY="127.0" mnemonicParsing="false" onAction="#GuardarVisitante" style="-fx-background-color: Lightgreen;" text="Guardar Visitantes">
+         <font>
+            <Font name="Tahoma Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLimpiar" layoutX="377.0" layoutY="127.0" mnemonicParsing="false" onAction="#LimpiarTabla" text="Limpiar">
+         <font>
+            <Font name="Tahoma Bold" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="630.0" layoutX="117.0" layoutY="44.0" startX="-111.0" />
+      <Line endX="646.0" layoutX="105.0" layoutY="165.0" startX="-100.0" />
+      <TableView fx:id="tblRegistro" layoutX="17.0" layoutY="175.0" prefHeight="358.0" prefWidth="734.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="columnNombre" prefWidth="364.0" style="-fx-background-color: black;" text="Nombre" />
+          <TableColumn fx:id="columnTipo" prefWidth="368.0" style="-fx-background-color: black;" text="Tipo de Visitante" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtTipo" layoutX="245.0" layoutY="88.0" />
+      <ProgressBar fx:id="barraCarga" layoutX="17.0" layoutY="559.0" prefHeight="18.0" prefWidth="734.0" progress="0.0" />
+      <Label fx:id="lblEstado" layoutX="22.0" layoutY="542.0" text="Estado">
+         <font>
+            <Font name="Tahoma" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
